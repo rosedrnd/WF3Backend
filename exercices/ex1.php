@@ -67,12 +67,12 @@
 
 <?php
     //Incrémentation (ajoute 1) 
-    $z++;
+    $z++; //similaire to "++$z"
     $z = $z + 1; // same results as above  
     $z += 1; // same results as above
    
     //décrémentation (retire 1) 
-    $z--; 
+    $z--; //similaire to "--$z"
     $z = $z - 1; // same results as above  (moins utilisé)
     $z -= 1; // same results as above  
 
@@ -111,7 +111,7 @@
     Veillez à ettre CLAIR, BREF et Precis sur le danger et sur le lieu d'accident.
 </p>
 
-<h2> Exemple g: les opérateurs php</h2>
+<h2> Exemple g: les opérateurs arithmétiques php</h2>
 
 <?php
     $x = 20; 
@@ -151,8 +151,44 @@
         $o .= $o; 
         echo "<li>".$o."</li>"; //affiche Bonjour, monde ! Bonjour, monde ! 
 
+        //opérateurs de comparaison
+    $x = 100;
+    $y = "100";
+    echo "<li>";
+        var_dump($x == $y); // "valeur égale à"
+    echo "</li>";
+
+    echo "<li>";
+        var_dump($x === $y); // "valeur et type égaux à"
+    echo "</li>";
+
+    echo "<li>";
+        var_dump($x != $y); // "valeur différente de"
+    echo "</li>";
+
+    echo "<li>";
+        var_dump($x !== $y); // "valeur et types différents de"
+    echo "</li>";
+
+    $a = 50;
+    $b = 90;
+    echo "<li>";
+        var_dump($a > $b); // "strictement supérieur à"
+    echo "</li>";
+
+    echo "<li>";
+        var_dump($a >= $b); // "supérieur ou égal à"
+    echo "</li>";
+
+    echo "<li>";
+        var_dump($a < $b); // "strictement inférieur à"
+    echo "</li>";
+
+    echo "<li>";
+    var_dump($a <= $b); // "inférieur ou égal à"
+    echo "</li>";
     ?>
-</ul>
+</ul> 
 </body>
 
 </html> 
