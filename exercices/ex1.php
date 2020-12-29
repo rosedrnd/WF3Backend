@@ -123,8 +123,36 @@
     <li><?php echo ($x * $y); //affiche 120 ?></li>
     <li><?php echo ($x / $y); //affiche 3.2222222222 ?></li>
     <li><?php echo ($x % $y); //affiche 2 ?></li>
-</ul>
 
+    <?php 
+        $y = 20; 
+        $y += 100;
+        echo "<li>".$y."</li>"; //affiche 120 
+        
+        $z = 50; 
+        $z -= 25; 
+        echo "<li>".$z."</li>"; //affiche 25
+        
+        $i= 5; 
+        $i*= 6; 
+        echo "<li>".$i."</li>"; //affiche 30 
+        
+        $j = 10; 
+        $j /=5; 
+        echo "<li>".$j."</li>"; //affiche 2 
+
+        $k = 20; 
+        $k %= 7; 
+        echo "<li>".$k."</li>"; //affiche 6 
+
+        $o = "Bonjour"; 
+        $o .= ", monde ! ";
+        echo "<li>".$o."</li>"; //affiche Bonjour, monde ! 
+        $o .= $o; 
+        echo "<li>".$o."</li>"; //affiche Bonjour, monde ! Bonjour, monde ! 
+
+    ?>
+</ul>
 </body>
 
-</html>
+</html> 
