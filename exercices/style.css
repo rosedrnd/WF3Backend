@@ -1,3 +1,10 @@
 li  {
     font-weight: bold;
 } 
+
+p.attention::before {
+    content: "⚠ Attention!";
+    font-size: 1.2em;
+    color: #FF0000;
+
+}

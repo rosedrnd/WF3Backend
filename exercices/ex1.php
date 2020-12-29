@@ -39,8 +39,18 @@
     //echo VITESSE_MAX; 
     //echo " "; 
     //echo constant("VITESSE_MAX");
+?> 
+<?php echo "<a href='https:google.fr'>".$z."</a>";?> <!--the simple quote fixes the problem-->
+
+<!--exemple avec  une citation-->
+<br>
+<?php echo 
+    "<p> 
+        Sayah a dit: 
+        <q>BONJOUR</q>
+    </p>"
+    
 ?>
-<p><?php echo $z;?></p>
 
 <h2>Exemple c)</h2> 
 
@@ -71,8 +81,24 @@
 </ul>
 
 <h2>Exemple d:html dans une balise php</h2>
-<?php echo "<p>" .$texteDuParagraphe."</ph>"; //"." concaténation?> 
+<?php echo "<p>" .$texteDuParagraphe."</p>"; //"." concaténation?> 
 <?php echo "<p>Hello World!</p>"; ?> <!--same as above--> 
+<?php echo "Hello World!"; // same as above with not tag ?>
+
+<h2> Exemple d: rappel de html et css </h2>
+
+<p class="attention"> 
+    Il faut nettoyer la plai avant de metter le 
+    pansement sinon ul y a un risque d'infection.
+</p>
+
+<p> 
+    Vous pouvez appeles les secours en composant le numéro.
+</p>
+
+<p class="attention">
+    Veillez à ettre CLAIR, BREF et Precis sur le danger et sur le lieu d'accident.
+</p>
 </body>
 
 </html>
