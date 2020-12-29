@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    <link rel="stylesheet" href="style.css"/>
+</head>
 <body>
 
     <h1>Exercice 1 de PHP</h1>
@@ -11,20 +13,21 @@
     <?php
     // display exemple a) en HTML
     echo "Hello World!"; 
-?>
+    ?>
 
     <h2>Exemple b)</h2>
 
-    <?php 
+<?php 
+//Définition de variable
     $texteDuParagraphe = "Hello world!"; 
     $entier = 7; 
     $decimal = 10.5;
-    $x = 3; 
+    $x = 12.5;
     $y = 4;
     $z = $x + $decimal;
 
 
-    //définir un constant
+    //définition de constant
     define("VITESSE_MAX", 30000); 
     define("AGE_LIMITE", 14); 
 
@@ -32,14 +35,40 @@
     // echo $entier; 
     // echo $decimal;   
 
-    // display constant, echo $VITESSE_MAX is not valid because it is not a variable
-    echo $VITESSE_MAX; 
     //valid syntax to display constant
-    echo VITESSE_MAX; 
-    echo " "; 
-    echo constant("VITESSE_MAX");
-    
+    //echo VITESSE_MAX; 
+    //echo " "; 
+    //echo constant("VITESSE_MAX");
+?>
+<p><?php echo $z;?></p>
+
+<h2>Exemple c)</h2> 
+
+<?php
+    //Incrémentation (ajoute 1) 
+    $z++;
+    $z = $z + 1; // same results as above  
+    $z += 1; // same results as above
+   
+    //décrémentation (retire 1) 
+    $z--; 
+    $z = $z - 1; // same results as above  (moins utilisé)
+    $z -= 1; // same results as above  
+
+    //exemple supplémentatire
+    $z= $entier + $entier - $decimal; 
+
+    echo $z; 
 ?>
 
+<h2>Exemple d)</h2>
+<!--mise en place d'une liste-->
+<ul>
+<li><?php echo $texteDuParagraphe; ?></li>
+<li><?php echo $entier; ?></li>
+<li><?php echo $z;?></li>
+<li><?php echo $decimal;?></li>
+</ul>
 </body>
-</hmtl>
+
+</html>
