@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="fr">
+
     <link rel="stylesheet" href="style.css"/>
+    <!--pour déclarer un utf8 sur le fichier php/hmtl -->
+    <meta charset="UTF-8">
+    <!--mise en place favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
 
@@ -99,6 +110,21 @@
 <p class="attention">
     Veillez à ettre CLAIR, BREF et Precis sur le danger et sur le lieu d'accident.
 </p>
+
+<h2> Exemple g: les opérateurs php</h2>
+
+<?php
+    $x = 20; 
+    $y = 6; 
+?>
+<ul>
+    <li><?php echo ($x + $y); //affiche 26 ?></li>
+    <li><?php echo ($x - $y); //affiche 14 ?></li>
+    <li><?php echo ($x * $y); //affiche 120 ?></li>
+    <li><?php echo ($x / $y); //affiche 3.2222222222 ?></li>
+    <li><?php echo ($x % $y); //affiche 2 ?></li>
+</ul>
+
 </body>
 
 </html>

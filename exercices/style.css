@@ -3,7 +3,7 @@ li  {
 } 
 
 p.attention::before {
-    content: "⚠ Attention!";
+    content: "⚠ Attention❗";
     font-size: 1.2em;
     color: #FF0000;
 
