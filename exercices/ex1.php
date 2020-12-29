@@ -61,7 +61,7 @@
     echo $z; 
 ?>
 
-<h2>Exemple d)</h2>
+<h2>Exemple d:php dans une balise html</h2>
 <!--mise en place d'une liste-->
 <ul>
 <li><?php echo $texteDuParagraphe; ?></li>
@@ -69,6 +69,10 @@
 <li><?php echo $z;?></li>
 <li><?php echo $decimal;?></li>
 </ul>
+
+<h2>Exemple d:html dans une balise php</h2>
+<?php echo "<p>" .$texteDuParagraphe."</ph>"; //"." concaténation?> 
+<?php echo "<p>Hello World!</p>"; ?> <!--same as above--> 
 </body>
 
 </html>
