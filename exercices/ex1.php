@@ -207,13 +207,26 @@
     
     <?php
     $x=10;
-    if ($x >= 10) { //
-    echo "Bonjour!"; //true
-    } elseif ($x < 5) {
-    echo "Salut! "; //false
+    if ($x >= 10) { //if x is more than to 10 
+    echo "<p>Bonjour&nbsp;!</p>"; //display "Bonjour"
+    } elseif ($x < 5) { //second condition if the first condition is false
+    echo "<p>Salut&nbsp;!</p>"; //display ""Salut"
     } else { 
-    echo "Rien à faire"; //bonjour   
+    echo "<p>Rien à faire&nbsp;!</p>"; //if the second condition is not true then display "Rien à faire"   
     }
+    ?>
+
+<?php
+    $x=10;
+    echo "<p>"; 
+    if ($x >= 10) { //if x is more than to 10 
+    echo "Bonjour&nbsp;!"; //display "Bonjour"
+    } elseif ($x < 5) { //second condition if the first condition is false
+    echo "Salut&nbsp;!"; //display ""Salut"
+    } else { 
+    echo "Rien à faire&nbsp;!"; //if the second condition is not true then display "Rien à faire"   
+    }
+    echo "</p>";
     ?>
     
  
