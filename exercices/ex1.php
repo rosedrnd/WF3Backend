@@ -338,7 +338,15 @@
 ?>
 <!--Utilisez la boucle "for" pour tester si le nombre 3457 est premier -->
 <?php
-    //je n'arrive pas à répondre à cette question
+    //je ne suis pas sur mais
+    $number = array (3457, 4567, 8799);
+    $taille = count($number);
+    for($i =0; $i < $taille ;$i++) {
+            if ($i = 3457) 
+            {
+              echo $number[0]; 
+            }
+}
 ?>
 
 
