@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-</head>
+</head>   
 <body>
 
     <h1>Exercice 1 de PHP</h1>
@@ -58,10 +58,13 @@
 <?php echo 
     "<p> 
         Sayah a dit: 
-        <q>BONJOUR</q>
+        <q>Bonjour l'Histoire!</q>
+        et il a aussi ajouté: <q>Hello people</q>
     </p>"
     
 ?>
+<!--espace insécable-->
+<h1> Voici un espace insécable&nbsp;?</h2>
 
 <h2>Exemple c)</h2> 
 
