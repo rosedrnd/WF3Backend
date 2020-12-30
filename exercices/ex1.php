@@ -337,6 +337,7 @@
             
 ?>
 <!--Utilisez la boucle "for" pour tester si le nombre 3457 est premier -->
+<p>
 <?php
     //je ne suis pas sur mais
     $number = array (3457, 4567, 8799);
@@ -348,6 +349,7 @@
             }
 }
 ?>
+</p>
 
 
 </body>
