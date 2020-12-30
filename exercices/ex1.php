@@ -114,7 +114,7 @@
     Veillez à ettre CLAIR, BREF et Precis sur le danger et sur le lieu d'accident.
 </p>
 
-<h2> Exemple g: les opérateurs arithmétiques php</h2>
+<h2> Exemple e: les opérateurs arithmétiques php</h2>
 
 <?php
     $x = 20; 
@@ -191,7 +191,32 @@
     var_dump($a <= $b); // "inférieur ou égal à"
     echo "</li>";
     ?>
-</ul> 
+    </ul>
+
+    <h2> Exemple f: les opérateurs logiques php</h2>
+    <!--Les opérateurs logiques/Logical operations-->
+    <ul>
+    <li><?php var_dump(10 AND 0);//ET ?></li>
+    <li><?php var_dump(10 OR 0);//OU ?></li>
+    <li><?php var_dump(10 && 0);//ET ?></li>
+    <li><?php var_dump(10 || 0);//OU ?></li>
+    <li><?php var_dump(! true);//NON ?></li>
+    </ul>
+
+    <h2> Exemple g&nbsp;: les conditions php</h2>
+    
+    <?php
+    $x=10;
+    if ($x >= 10) { //
+    echo "Bonjour!"; //true
+    } elseif ($x < 5) {
+    echo "Salut! "; //false
+    } else { 
+    echo "Rien à faire"; //bonjour   
+    }
+    ?>
+    
+ 
 </body>
 
 </html> 
