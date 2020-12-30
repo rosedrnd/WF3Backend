@@ -144,7 +144,7 @@
         $j /=5; 
         echo "<li>".$j."</li>"; //affiche 2 
 
-        $k = 20; 
+        $k = 1000; 
         $k %= 7; 
         echo "<li>".$k."</li>"; //affiche 6 
 
@@ -228,8 +228,119 @@
     }
     echo "</p>";
     ?>
-    
- 
-</body>
 
+    <!--conditions using time-->
+    <?php
+    $t = date("H"); // date("H") indicates the current time as a variable
+
+    if ($t < "10") { //time is less than 10 
+    echo "Have a good morning!"; 
+    } elseif ($t < "20") { //time is less than 20
+    echo "Have a good day!";
+    } else {               //if the second condition is not true then...
+    echo "Have a good night!"; //display this 
+    }   
+    ?>
+
+    <!--conditions using SWITCH-->
+<?php
+    $favcolor="red"; //variable given 
+    echo "<p>";
+    switch ($favcolor) {//  c'est idéal quand il y a plusieurs cas à vérifier  
+        case "red": 
+            echo "Votre couleur préférée est le rouge&nbsp;!";
+        break; //on casse la boucle si c'est vrai
+        case "blue":
+            echo "Votre couleur préférée est le bleu&nbsp;!";
+        break; 
+        case "green":
+            echo "Votre couleur préférée est le vert&nbsp;!";
+        break;
+        default:
+            echo "Vous n’avez pas de couleur préférée&nbsp;!";
+    }
+    echo "</p>"; 
+
+    //example loop with while, we should always put a stop condition
+    $x = 1; 
+    echo "<ul>"; 
+     while($x <= 5) {
+        echo "<li>$x</li>"; 
+        $x++;  
+    }
+    echo "</ul>";
+
+    //another loop formula but not as commonly used as "while"
+
+    $x = 1;
+    echo "<ul>"; 
+    do { 
+        echo "<li>$x</li>"; 
+        $x++;  
+    } while($x <= 5); 
+    
+    echo "</ul>";
+      
+    //loop for commonly used as while, the latter is often used by beginners
+    
+    echo "<ul>"; 
+    for ($i =1; $i <= 5; $i++) {
+        echo "<li>$i</li>"; //same results as above
+    }
+    echo "</ul>"; 
+
+  
+?>
+ <h2> TP 1</h2>
+ 
+<!--TP 1-->
+
+<!--Déclare une variable $x = 1 et une varibale $y =  835
+        -En utilisant la boucle "while" ajoutez successivement 1 à x
+        jusqu'à qu'il soit égale à y. Dans ce cas, affichez x et y. -->
+<?php
+        $x = 1; 
+        $y = 835; 
+        echo "<ul>";
+            while($x < $y) {
+            $x++; 
+        }
+        echo "<li>$x</li>";
+        echo "<li>$y</li>";
+        echo "</ul>"; 
+?>
+
+<!--Donnez une variante de cette boucle avec la boucle do...while-->
+
+<?php
+        $x = 1; 
+        $y = 835; 
+        echo "<ul>";
+        do {
+           $x++; 
+        } while ($x < $y); 
+        echo "<li>$x</li>";
+        echo "<li>$y</li>";
+        echo "</ul>"; 
+?>
+
+<!--Ecrivez une boucle qui affiche les multiples du nombre 7 à 1000.-->
+<?php   
+     echo "<ul>";  
+     for ($x = 1; $x <= 1000; $x++)
+     {
+       if ( $x % 7 == 0)
+        {
+          echo "<li>$x</li>" ;
+        }    
+    }       
+            
+?>
+<!--Utilisez la boucle "for" pour tester si le nombre 3457 est premier -->
+<?php
+    //je n'arrive pas à répondre à cette question
+?>
+
+
+</body>
 </html> 
