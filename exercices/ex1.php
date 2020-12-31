@@ -302,7 +302,7 @@
         $x = 1; 
         $y = 835; 
         echo "<ul>";
-            while($x < $y) {
+        while($x < $y) {
             $x++; 
         }
         echo "<li>$x</li>";
@@ -327,25 +327,18 @@
 <!--Ecrivez une boucle qui affiche les multiples du nombre 7 à 1000.-->
 <?php   
      echo "<ul>";  
-     for ($x = 1; $x <= 1000; $x++)
+     for ($x = 7; $x <= 1000; $x += 7)
      {
-       if ( $x % 7 == 0)
-        {
-          echo "<li>$x</li>" ;
-        }    
+        echo "<li>$x</li>" ;
+            
     }       
             
 ?>
 <!--Utilisez la boucle "for" pour tester si le nombre 3457 est premier -->
 <p>
 <?php
-    //je ne suis pas sur mais
-    $number = array (3457, 4567, 8799);
-    $taille = count($number);
-    for($i =0; $i < $taille ;$i++) {
-            if ($i = 3457) 
-            {
-              echo $number[0]; 
+    //je ne suis pas sur mais..
+    
             }
 }
 ?>
