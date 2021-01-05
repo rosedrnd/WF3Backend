@@ -426,6 +426,7 @@ echo "<p>".print_r(array_values($capitale))."</p>"; //affichage des valeurs
 
 //in array : find if the value is in the table
 
+echo "<p>"; 
 $etudiants=array("Zakaria","Fatima","Rida");
 if (in_array("Zakaria", $etudiants)) //if Zakaria is in the table etudiants..  
 {
@@ -436,17 +437,28 @@ else
 echo "Non trouvé!"; //if not display 
 
 }
+echo "<p>"; 
 // array_merge : https://www.php.net/manual/fr/function.array-merge.php
 /* array_merge() rassemble les éléments d'un ou de plusieurs tableaux en ajoutant les valeurs de l'un à la fin de l'autre. 
 Le résultat est un tableau. Si les tableaux d'entrées ont des clés en commun, alors, 
 la valeur finale pour cette clé écrasera la précédente. 
 Cependant, si les tableaux contiennent des clés numériques, la valeur finale n'écrasera pas la valeur originale, mais sera ajoutée.
 Les clés numériques des tableaux d'entrées seront renumérotées en clés incrémentées partant de zéro dans le tableau fusionné.*/
+    //merge_array
+    $array1 = array("color" => "red", 2, 4, "size" => "tall", "yes", 7);
+    echo "<p>".print_r($array1)."</p>";
 
+    // Rappel "array_keys": https://www.php.net/manual/fr/function.array-keys.php
+    echo "<p>".print_r(array_keys($array1))."</p>";
 
-
+    $array2 = array("a", "B", "color" => "green", "shape" => "trapezoid", 4);
+    $result = array_merge($array1, $array2);
+    // tri des données : tout dépend comment ton php est configuré 
+    sort($result);
+    echo "<p>".print_r($result)."</p>";
 
 ?>
+
 
 
 
