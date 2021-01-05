@@ -105,7 +105,10 @@
     foreach ($x as $letter){
         echo "<li>".$letter."</li>"; 
     }
-    echo "</ol>";      
+    echo "</ol>";    
+    
+
+
 ?>
 </body>
 </html> 
