@@ -3,8 +3,8 @@
     when changing certain styles on the website
     below are the most common*/
     /*PALETTE*/
-    --color-title: hsl(352.74deg,95%,45.69%); /* it's useful when using a highlight by chaing the luminosity*/  
-    --color-hover: hsl(352.74deg,95%,65.69%); /* tint, saturation and luminosity*/
+    --color-title: hsl(352.74deg,95%,45.69%); /* hue, saturation, light :it's useful when using a highlight by changing the luminosity*/  
+    --color-hover: hsl(352.74deg,95%,65.69%); /* teinte, saturation and luminosité*/
     --color-transparence: rgba(05, 05, 05, 50%); /* the last value determines the transparency */
     --color-paragraph: rgb(00,00,00); 
     /*Font style*/ 
@@ -33,10 +33,11 @@ p.attention::before {
 }
 /* how the remove the ordered style via css*/ 
 ol {
-    counter-reset: moncompteur; 
+    counter-reset: moncompteur; /*we gave the counter name "moncompteur", it starts with 1*/ 
     list-style-type: none;
 }
 ol li::before {
-    content: "Etape" counter(moncompteur) " : "; 
+    content: "Step " counter(moncompteur) " : "; /* */ 
     counter-increment: moncompteur; 
 }
+

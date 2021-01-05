@@ -2,7 +2,6 @@
 <html>
 <head lang="fr">
 
-    <link rel="stylesheet" href="style.css"/>
     <!--pour déclarer un utf8 sur le fichier php/hmtl -->
     <meta charset="UTF-8">
     <!--mise en place favicon-->
@@ -23,7 +22,9 @@
     // for
     echo "<h3>"."For"."</h3>"; 
     
-    $mois = array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"); 
+    $mois = array("janvier", "février", "mars", "avril", 
+                    "mai", "juin", "juillet", "août",   
+                    "septembre", "octobre", "novembre", "décembre"); 
     $taille = count($mois); 
     echo "<ul>"; 
     for($i = 0; $i < $taille; $i++) { 
@@ -53,6 +54,12 @@
     }
     while($i < $taille );  
     echo "</ul>";
+    // We can also use foreach to get the same results
+
+    $i= 0; 
+    foreach($mois as $mois[$i]) {
+        echo $mois[$i]; 
+    }
 
     /*Exercice 2: Écrire un tableau associatif, qui associe des pays à des capitales 
     (France, Norvège, Sénégal, Inde, Chine, Mexique).
@@ -62,7 +69,9 @@
     echo "<ul>"; 
     foreach($capitale as $capitaleDonnee) {
         echo "<li>".$capitaleDonnee."</li>"; 
-    } 
+    }
+    echo "<br>"; 
+    echo "<li>".$capitale["Sénégal"]."</li>";
     echo "</ul>"; 
 
 /*Exercice 3:
@@ -74,19 +83,29 @@
     $y = array("E","F","G", "H");
     
     // À l'aide d'une boucle de votre choix, mettre y à la suite de x.
-    echo "<p>"; 
-    $taille = count($x);  
-    for ($i = 0;$i < $taille;$i++) {
-        echo $x[$i].$y[$i]; 
-    } 
-    echo "</p>"; 
+
+    for($i=0; $i < count($y); $i++) {
+        $x[] = $y[$i]; 
+    }
 
     //  À l'aide d'une boucle de votre choix, afficher x.
-    echo "<ul>"; 
-    for ($i = 0; $i< $taille; $i++) {
-    echo "<li>".$x[$i]."</li>"; 
+    echo "<ol type = 'A'>"; 
+    foreach ($x as $letter) {
+    echo "<li>".$letter."</li>"; 
     }
-    echo "</ul>"; 
+    echo "</ol>"; 
+
+    //using foreach 
+
+    
+    foreach ($y as $letter){
+        $x [] = "$letter"; 
+    }
+    echo "<ol type = 'A'>"; 
+    foreach ($x as $letter){
+        echo "<li>".$letter."</li>"; 
+    }
+    echo "</ol>";      
 ?>
 </body>
 </html> 
