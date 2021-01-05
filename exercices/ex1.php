@@ -396,9 +396,14 @@
 }  
     echo "</ul>"; 
     echo "<p>".print_r($age)."</p>";
+
+    
+
+  
+
 ?>
- <h2>Associatives Tables: Le Trie</h2>
-<!--sorting associative tables-->
+ <h2>Le Trie</h2>
+<!--sorting tables-->
  <?php
 
 $cars= array("Dacia", "BMW", "Toyota"); //creation du tableau
@@ -410,8 +415,33 @@ $numbers=array(4,6,2,22,11); //création du tableau
 sort($numbers); //tri dans l'ordre croissant
 echo "<p>".print_r($numbers)."</p>"; 
 
-rsort ($numbers); //tri dans l'ordre inverse/décroissant
+rsort ($numbers); //tri dans l'ordre inverse/décroissant rsort= reverse sort 
 echo "<p>".print_r($numbers)."</p>";  
+
+//Display either the value or the key
+$capitale = array("France"=>"Paris", "Norvege"=>"Oslo", "Sénégal"=>"Dakar", "Inde"=>"New Delhi", "Chine"=>"Pékin", "Méxique"=>"Mexico");
+echo "<p>".print_r($capitale)."</p>";
+echo "<p>".print_r(array_keys($capitale))."</p>"; //affichage des clefs
+echo "<p>".print_r(array_values($capitale))."</p>"; //affichage des valeurs
+
+//in array : find if the value is in the table
+
+$etudiants=array("Zakaria","Fatima","Rida");
+if (in_array("Zakaria", $etudiants)) //if Zakaria is in the table etudiants..  
+{
+echo "Trouvé"; //display this
+}
+else
+{
+echo "Non trouvé!"; //if not display 
+
+}
+// array_merge : https://www.php.net/manual/fr/function.array-merge.php
+/* array_merge() rassemble les éléments d'un ou de plusieurs tableaux en ajoutant les valeurs de l'un à la fin de l'autre. 
+Le résultat est un tableau. Si les tableaux d'entrées ont des clés en commun, alors, 
+la valeur finale pour cette clé écrasera la précédente. 
+Cependant, si les tableaux contiennent des clés numériques, la valeur finale n'écrasera pas la valeur originale, mais sera ajoutée.
+Les clés numériques des tableaux d'entrées seront renumérotées en clés incrémentées partant de zéro dans le tableau fusionné.*/
 
 
 
