@@ -281,7 +281,7 @@
     
     echo "</ul>";
       
-    //loop for commonly used as while, the latter is often used by beginners
+    //loop "for" is commonly used as "while", the latter is often used by beginners
     
     echo "<ul>"; 
     for ($i =1; $i <= 5; $i++) {
@@ -293,56 +293,131 @@
 ?>
  <h2> TP 1</h2>
  
-<!--TP 1-->
 
-<!--Déclare une variable $x = 1 et une varibale $y =  835
-        -En utilisant la boucle "while" ajoutez successivement 1 à x
-        jusqu'à qu'il soit égale à y. Dans ce cas, affichez x et y. -->
-<?php
-        $x = 1; 
-        $y = 835; 
-        echo "<ul>";
-        while($x < $y) {
-            $x++; 
-        }
-        echo "<li>$x</li>";
-        echo "<li>$y</li>";
-        echo "</ul>"; 
-?>
 
-<!--Donnez une variante de cette boucle avec la boucle do...while-->
+<h2> Exemple f&nbsp;: les tableaux et arrays</h2>
 
 <?php
-        $x = 1; 
-        $y = 835; 
-        echo "<ul>";
-        do {
-           $x++; 
-        } while ($x < $y); 
-        echo "<li>$x</li>";
-        echo "<li>$y</li>";
-        echo "</ul>"; 
-?>
+    //Using array
 
-<!--Ecrivez une boucle qui affiche les multiples du nombre 7 à 1000.-->
+    $cars[0] = "Dacia";
+    $cars[1] = "BMW";
+    $cars[2] = "Toyota";
+
+    $cars = ["Dacia", "BMW", "Toyota"]; //similar to the 375-377
+
+    $cars = array("Dacia", "BMW", "Toyota", "Peugot"); //an
+    echo "<p>".$cars[0]." et ".$cars[1]." et ".$cars[2]."<p>"; //This displays Dacia et BMW et Toyota
+
+    //Counting the number of data in an array 
+        //Let's add new items first 
+    $cars [] =  "Renault"; 
+    $cars [] =  "Mercedes";
+        //let now check if it has been added based on their current position 
+    echo $cars[4]." et ".$cars[5];    
+        //Now let's count    
+    echo "<p>".count($cars)."</p>";
+
+    //Browsing a table
+    $taille = count($cars);
+    echo "<ul>"; 
+    for($i = 0; $i < $taille ;$i++) { //as long as the position is less than it's size
+        echo "<li> ".$cars[$i]." </li>"; //this will show all items in the array 
+    } 
+    echo "</ul>";
+     
+?>
+<!-- Exemples d'utilisation correcte de 'ul' et 'ol' -->
+<h2> Ma recette de gateau </h2>
+
+<ul>
+    <h3> Ingrédients : </h3>
+    <li> 100g de farine </li>
+    <li> 10g de sucre </li>
+    <li> 3 carrés de chocolat </li>
+</ul>
+<ol>
+    <h3> Réalisation : </h3>
+    <li> bla bla </li>
+    <li> bla bli blou</li>
+    <li> bla bli blo</li>
+</ol>
+
+<!--associative arrays/tables-->
+    <h2>Exemple g&nbsp;: Associative tables</h2>
+    <!--There are two ways to do this, the first one is below:-->
 <?php   
-     echo "<ul>";  
-     for ($x = 7; $x <= 1000; $x += 7)
-     {
-        echo "<li>$x</li>" ;
-            
-    }       
-            
-?>
-<!--Utilisez la boucle "for" pour tester si le nombre 3457 est premier -->
-<p>
-<?php
-    //je ne suis pas sur mais..
+    $age ["Zakaria"]="27"; 
+    $age ["Fatima"]="37"; 
+    $age["Rida"]="43"; 
+
+    echo "<p>".$age["Zakaria"]."</p>";
+    echo "<p>".$age["Fatima"]."</p>";
+    echo "<p>".$age["Rida"]."</p>"; 
+
+    // Second one: the symbol "=>" means an arrow that assigns a value to a variable
+    //Loop through associative arrays
+    $age = array("Linda"=>"10", "Zakaria"=>"27", "Fatima"=>"37", "Rida"=>"43", "Nadia" =>"15");
+
+    echo "<ul>";
+    foreach($age as $name=>$value) {
+        echo "<li>".$name." a ".$value." printemps !"."</li>";
+        if ($value <= 10) echo "<p>Enfant !</p>";
+        else if ($value > 10 && $value < 18) echo "<p>Ado&nbsp;!</p>";
+        else if ($value >= 30 && $value < 40) echo "<p>Alors, on a la trentaine&nbsp;?</p>";
+        else if ($value == 43) echo "<p>Tu t'apellerais pas Rida, par hasard&nbsp;?</p>";
+        else if ($value < 30 && $value >= 20) echo "<p>La vingtaine&nbsp;!</p>";
+    }
+    echo "</ul>";
     
-            }
-}
+
+    //using switch
+    $age = array("Linda"=>"10", "Zakaria"=>"27", "Fatima"=>"37", "Rida"=>"43", "Rida" =>"15");
+    echo "<ul>";
+    foreach($age as $name=>$value) {
+        echo "<li>".$name." a ".$value." printemps !"."</li>";
+        switch ($value) {
+        case ($value <=10): 
+            echo "Enfant&nbsp;!";
+            break; 
+        case ($value > 10 && $value < 18):
+            echo "<p>Ado&nbsp;!</p>";
+            break; 
+        case ($value >= 30 && $value < 40):
+            echo "<p>Alors, on a la trentaine&nbsp;?</p>";
+            break;
+        case ($value == 43): 
+            echo "<p>Tu t'apellerais pas Rida, par hasard&nbsp;?</p>";
+            break; 
+        case ($value < 30 && $value >= 20):  
+            echo "<p>La vingtaine&nbsp;!</p>";
+            break; 
+    }
+}  
+    echo "</ul>"; 
+    echo "<p>".print_r($age)."</p>";
 ?>
-</p>
+ <h2>Associatives Tables: Le Trie</h2>
+<!--sorting associative tables-->
+ <?php
+
+$cars= array("Dacia", "BMW", "Toyota"); //creation du tableau
+
+sort($cars); //cette fonction trie les données dans l'ordre alphabétique//
+echo "<p>".print_r($cars)."</p>"; //"print_r($cars)" affichage du type de données et les autres informations  
+
+$numbers=array(4,6,2,22,11); //création du tableau
+sort($numbers); //tri dans l'ordre croissant
+echo "<p>".print_r($numbers)."</p>"; 
+
+rsort ($numbers); //tri dans l'ordre inverse/décroissant
+echo "<p>".print_r($numbers)."</p>";  
+
+
+
+
+?>
+
 
 
 </body>
