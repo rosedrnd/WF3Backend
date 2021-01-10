@@ -2,7 +2,6 @@
 <html>
 <head lang="fr">
 
-    <link rel="stylesheet" href="style.css"/>
     <!--pour déclarer un utf8 sur le fichier php/hmtl -->
     <meta charset="UTF-8">
     <!--mise en place favicon-->
@@ -16,19 +15,13 @@
 </head>   
 <body>
 
-    <h1>Exercice 1 de PHP</h1>
-
-
-    <h2>Exemple a)</h2>
-
-    <?php
-    // display exemple a) en HTML
-    echo "Hello World!"; 
-    ?>
-
-    <h2>Exemple b)</h2>
-
 <?php 
+
+include 'fonctions.php'; 
+
+tag("Variables", "h2"); 
+
+
 //Définition de variable
     $texteDuParagraphe = "Hello world!"; 
     $entier = 7; 
@@ -50,8 +43,8 @@
     //echo VITESSE_MAX; 
     //echo " "; 
     //echo constant("VITESSE_MAX");
-?> 
-<?php echo "<a href='https:google.fr'>".$z."</a>";?> <!--the simple quote fixes the problem-->
+ 
+ echo "<a href='https:google.fr'>".$z."</a>";?> <!--the simple quote fixes the problem-->
 
 <!--exemple avec  une citation-->
 <br>
@@ -456,6 +449,53 @@ Les clés numériques des tableaux d'entrées seront renumérotées en clés inc
     // tri des données : tout dépend comment ton php est configuré 
     sort($result);
     echo "<p>".print_r($result)."</p>";
+
+?>
+
+<h2>Exemple h: Les fonctions </h2>
+
+<?php
+
+//creating a function
+/*function writeMsg($firstname, $name, $repetition) { //definition of the function
+    for ( $i = 0; $i < $repetition; $i++)  //function with loop 
+        echo "Hello ".$firstname." ".$name."!"; //what the function does
+    }
+    writeMsg("Sayah", "El Yatim", 3); //calling the function with three parameters equal to the function
+
+//développement recursive
+/*function writeMsg($firstname, $name) { 
+    echo "Hello ".$firstname." ".$name."!"."<br>";
+    }
+    for ( $i = 0; $i <= 10; $i++) {
+    writeMsg("Catherine", "Rose"); //appel de fonction
+}    */
+//creating another function
+
+//function with default parameters/arguments //
+function greetings($nom = "Fatima", $prenom= "") { //the default value for $nom is Fatima 
+    echo tag ("Hello"." ".$nom." ".$prenom); 
+}
+greetings("Mohammed"); //displays Hello Mohammed 
+greetings(); //Displays Hello Fatima 
+
+//Using return
+function somme ($x, $y) {
+   return $x + $y;  //the "return" attribute gives you the result of the calculation
+}
+
+$result1 = somme(3, 4); //uses the function to calculate the values and put in the variable
+$result2 = somme(2, 3); //same as above 
+
+echo tag(somme($result1,$result2)); //"echo" displays the calculations made above 
+
+/*We can also create functions that only make 
+calculations or modifies the database without returning or displaying results*/
+
+function verifSpam($message) {
+}
+
+
 
 ?>
 

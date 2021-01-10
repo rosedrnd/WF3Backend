@@ -1,0 +1,14 @@
+.nav-pills .nav-link.active {
+    background-color: rgb(252, 119, 152);
+    color: white; 
+}
+
+
+a {
+    color:rgb(252, 119, 152); 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}

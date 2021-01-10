@@ -49,10 +49,11 @@
 
 <!--Ecrivez une boucle qui affiche les multiples du nombre 7 à 1000.-->
 <?php   
-     echo "<ul>";  
-     for ($i = 7; $x < 1000; $x += 7)
-     {
-        echo "<li>$x</li>" ;
+     echo "<ul>"; 
+     $x= 7;  
+     while ($x < 1000) {
+        echo "<li>$x</li>";
+        $x += 7; 
     }       
     echo "</ul>";       
        
@@ -88,7 +89,11 @@
     }
 }
     echo "</p>"; 
-     
+
+    
+    
+
+
 ?>
 </body>
 
